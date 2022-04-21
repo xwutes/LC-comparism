@@ -21,3 +21,14 @@ Java declare variables:
       ListNode p1 = l1, p2 = l2;
     ...
     }
+as a static language, each variable should declare type
+
+comparing with python:
+
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        dummy = ListNode(-1)
+        p = dummy
+        
+could declare type through type hints,which is not affecting run-time but could be detected by third-party-tools
+
+reference:https://www.augmentedmind.de/2020/10/11/static-python-type-hints/
