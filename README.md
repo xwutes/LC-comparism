@@ -8,3 +8,11 @@ Usually there will be a default setting of ListNode have two attributes: self.va
 In python: so when initialize pointers of two sorted list could assign: l1,l2 = ListNode() to generate pointers respectively
 
 In Java:  ListNode p1 = l1, p2 = l2;
+
+**LC19. removeNthfromend**
+
+Java declare variables: public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+                               ListNode dummy = new ListNode(-1), p = dummy;
+                               
+                               ListNode p1 = l1, p2 = l2;
