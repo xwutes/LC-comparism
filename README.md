@@ -11,8 +11,13 @@ In Java:  ListNode p1 = l1, p2 = l2;
 
 **LC19. removeNthfromend**
 
-Java declare variables: public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+Java declare variables: 
 
-                               ListNode dummy = new ListNode(-1), p = dummy;
+
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+      ListNode dummy = new ListNode(-1), p = dummy;
                                
-                               ListNode p1 = l1, p2 = l2;
+      ListNode p1 = l1, p2 = l2;
+    ...
+    }
