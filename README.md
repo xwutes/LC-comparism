@@ -32,3 +32,18 @@ comparing with python:
 could declare type through type hints,which is not affecting run-time but could be detected by third-party-tools
 
 reference:https://www.augmentedmind.de/2020/10/11/static-python-type-hints/
+
+**LC206.ReverseList**
+
+In python:
+
+        if head is None or head.next is None:
+            return head
+
+notice if only have one if condition, there would be error of head attribute(next)
+
+key manipulation in recurse case.
+<img width="1211" alt="Screen Shot 2022-04-22 at 14 09 08" src="https://user-images.githubusercontent.com/92950517/164770860-7b5cc275-fdd1-4022-b34f-4d4a48fc9f14.png">
+it demenstrate a regular method to reverse a pointer.
+
+also there is a method to reverse list in limited window in LC92.
