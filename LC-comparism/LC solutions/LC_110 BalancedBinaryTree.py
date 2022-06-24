@@ -8,6 +8,6 @@ def helper(self, root):
         return 0
     left = self.helper(root.left)
     right = self.helper(root.right)
-    if left == -1 or right == -1 or abs(left - right) > 1:
+    if left == -1 or right == -1 or abs(left - right) > 1:  # heights diff more than 1, unbalanced
         return -1
-    return 1 + max(left, right)
+    return 1 + max(left, right)         # this line will return tree height
