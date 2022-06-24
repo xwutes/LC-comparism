@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": true,
+      "externalConsole": false,
+      "cwd": "/Users/bona/Desktop/LC_solutions/LC-comparism/LC solutions",
+      "program": "/Users/bona/Desktop/LC_solutions/LC-comparism/LC solutions/build/Debug/outDebug",
+      "MIMode": "gdb"
+    }
+  ]
+}
