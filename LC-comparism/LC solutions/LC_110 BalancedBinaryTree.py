@@ -1,5 +1,5 @@
 # LC_110 BalancedBinaryTree
-``
+
 def isBalanced(self, root: TreeNode) -> bool:
     return self.helper(root) != -1
 
