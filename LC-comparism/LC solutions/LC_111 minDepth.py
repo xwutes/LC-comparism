@@ -13,16 +13,16 @@ class Solution:
             return 0
 
         q = collections.deque()
-        q.append((root, 1))
+        q.append((root, 1))                         # main difference here is we are passing a tuple 
 
         while q:
             node, depth = q.popleft()
-
-            if not node.left and not node.right:
-                return depth
+                                                    # we could see no for loop here like traversing level
+            if not node.left and not node.right:    
+                return depth                        # where the loop ends
 
             if node.left:
-                q.qppend((node.left, depth + 1))
+                q.qppend((node.left, depth + 1))    # passing two arguments at the same time
 
             if node.right:
                 q.qppend((node.right, depth + 1))
