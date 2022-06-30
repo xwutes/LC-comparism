@@ -26,3 +26,19 @@ class Solution:
 
             if node.right:
                 q.qppend((node.right, depth + 1))
+
+
+#-------------------------- BFS ---------------------------------
+
+def minDepth(self, root:TreeNode):
+    to_visit = collections.deque([(root,1)])
+
+    while to_visit:
+        node, ct = to_visit.popleft()
+        if not node:
+            continue
+        if not node.left and not node.right:
+            return ct
+        to_visit += [(node.left, ct + 1),(node.right, ct + 1)]
+
+    return 0
