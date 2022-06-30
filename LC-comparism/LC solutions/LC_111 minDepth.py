@@ -28,6 +28,29 @@ class Solution:
                 q.qppend((node.right, depth + 1))
 
 
+#-------------------------- Standard BFS approach ---------------------
+def minDepth(self, root:TreeNode):
+    if not root:
+        return None
+    depth = 1
+    q = [root]
+
+    while q:
+        for i in range(len(q)):
+            node = q.pop(0)
+            if node.left is None and node.right is None:
+                return depth
+            
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+        depth += 1
+    return depth
+            
+
+
+
 #-------------------------- BFS ---------------------------------
 
 def minDepth(self, root:TreeNode):
@@ -42,3 +65,18 @@ def minDepth(self, root:TreeNode):
         to_visit += [(node.left, ct + 1),(node.right, ct + 1)]
 
     return 0
+
+
+#---------------------------BFS without input a tuple ------------
+
+def minDepth(self, root:TreeNode):
+    if not root:
+        return 0
+    stack = [root]
+    level = 1
+    while stack:
+        for node in stack:                                  # condition judgement putting here
+            if not node.left and not node.right:            
+                return level                                # without setting break, when condition met, while loop stop
+        level += 1
+        stack = [child for node in stack for child in (node.left, node.right) if child]
