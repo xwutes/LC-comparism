@@ -19,7 +19,7 @@ class Solution:
             node, depth = q.popleft()
                                                     # we could see no for loop here like traversing level
             if not node.left and not node.right:    
-                return depth                        # where the loop ends
+                return depth                        # where the loop ends, return depth not break
 
             if node.left:
                 q.qppend((node.left, depth + 1))    # passing two arguments at the same time
@@ -39,14 +39,14 @@ def minDepth(self, root:TreeNode):
         for i in range(len(q)):
             node = q.pop(0)
             if node.left is None and node.right is None:
-                return depth
+                return depth                        # all implementation is return depth not break
             
             if node.left:
                 q.append(node.left)
             if node.right:
                 q.append(node.right)
-        depth += 1
-    return depth
+        depth += 1                                  # depth plus one in python(behind if) is different in java(before if)
+    return depth                                    # for loops ends by the first node 3 then depth initial changed from 1 to 2
             
 
 
