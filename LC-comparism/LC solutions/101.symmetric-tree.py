@@ -19,8 +19,8 @@ import collections
 from typing import Optional
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-        q1 = collections.deque([root])
-        q2 = collections.deque([root])
+        q1 = collections.deque([root])                # if only (root), then it will say root is not iterable
+        q2 = collections.deque([root])                # if only [root], then the message could not handle len()
 
         while q1 or q2:
             s1, s2 = len(q1), len(q2)
