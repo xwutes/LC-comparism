@@ -28,8 +28,8 @@ class Solution:
                 q1.append(node1.left)                 # loop operation that varies
                 q1.append(node1.right)
 
-                q2.append(node2.left)
                 q2.append(node2.right)
+                q2.append(node2.left)
 
         return True
 
