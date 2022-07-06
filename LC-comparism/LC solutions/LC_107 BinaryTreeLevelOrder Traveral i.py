@@ -15,14 +15,14 @@ class Solution:
         while q:
             
             level = []
-            for i in range(len(q)):
-                node = q.popleft()
+            for i in range(len(q)):         # this cycle is looping in level,
+                node = q.popleft()          # only if there still have node in this level
                 level.append(node.val)
                 if node.left:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-                
+                # if indent here for res.append, there will be redundance of the result
             res.appendleft(level)           # deque() appendleft will take O(1)
-                    
+                                            # indentation is really important for this case
         return res 
