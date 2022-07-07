@@ -39,4 +39,6 @@ def levelOrder(root):
     return res
 
 root = [3,9,20,None,None,15,7]
-# expected output:[[3],[9,20],[15,7]]
+# expected output:[[3],[9,20],[15,7]]  if you see this output that means there would be empty list 
+#                                      at beginning of a while loop each iteration will fill up the
+#                                      list will element at this level
