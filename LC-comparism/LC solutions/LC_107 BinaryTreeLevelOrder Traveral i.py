@@ -25,6 +25,6 @@ class Solution:
                     q.append(node.right)
                 # if indent here for res.append, there will be redundance of the result
             res.appendleft(level)           # deque() appendleft will take O(1)
-            #res.append(level)                                # indentation is really important for this case
+            #res.append(level)              # indentation is really important for this case
         return res
         #return res[::-1] 
